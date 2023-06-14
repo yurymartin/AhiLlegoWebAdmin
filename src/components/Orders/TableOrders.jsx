@@ -82,7 +82,7 @@ const TableOrders = (props) => {
                   className="px-6 py-4 text-white whitespace-nowrap text-xs text-center"
                 >
                   {String(item._id).substring(
-                    String(item._id).length - 3,
+                    String(item._id).length - 6,
                     String(item._id).length
                   )}
                 </th>
@@ -96,9 +96,10 @@ const TableOrders = (props) => {
                   scope="row"
                   className="px-6 py-4 text-white whitespace-nowrap text-xs text-center"
                 >
-                  {`${item.deliveryManId.name || ""} ${
-                    item.deliveryManId.surname || ""
-                  }`}
+                  {item.deliveryManId &&
+                    `${item.deliveryManId.name || ""} ${
+                      item.deliveryManId.surname || ""
+                    }`}
                 </th>
                 <th
                   scope="row"

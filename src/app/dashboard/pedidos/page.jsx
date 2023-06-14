@@ -23,6 +23,7 @@ const OrdersPage = () => {
         // createdAtEnd: "2023-04-24",
       };
       let res = await orderService.findByFilters(filters);
+      console.log(JSON.stringify(res));
       setOrders(res);
     } catch (error) {
       console.log(error);

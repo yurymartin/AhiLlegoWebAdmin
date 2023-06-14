@@ -27,7 +27,6 @@ const ModalChangeStatus = (props) => {
         orderId: props.orderId,
         statusOrderId: statusOrderId,
       };
-      console.log("body= >", body);
       let res = await orderService.changeStatus(body);
       props.onCloseModal();
       props.handleGetOrders();
