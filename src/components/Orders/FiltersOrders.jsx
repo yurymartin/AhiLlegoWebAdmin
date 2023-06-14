@@ -6,7 +6,7 @@ const FiltersOrders = () => {
       <div class="p-4 text-xs text-gray-200 uppercase bg-gray-700">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit optio
         minus dolorem in quibusdam hic ut earum, quis modi aliquid facilis
-        rerum, ipsam numquam magnam iure expedita sit eius commodi!
+        rerum, ipsam numqu
       </div>
     </div>
   );

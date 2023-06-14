@@ -20,8 +20,8 @@ export const fontFamily = {
 
 export const apiAhiLlego = {
   develop: "http://localhost:3000/api/v1/ahi-llego",
-  quality: "http://3.80.107.238:3000/api/v1/ahi-llego",
-  production: "http://3.80.107.238:3000/api/v1/ahi-llego",
+  quality: "https://api.ahillego.com/api/v1/ahi-llego",
+  production: "https://api.ahillego.com/api/v1/ahi-llego",
 };
 
 export const storage = {

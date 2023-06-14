@@ -2,7 +2,7 @@ import axios from "axios";
 import ahiLlegoError from "../../../common/error/handler";
 import { apiAhiLlego } from "../../../common/utils/Constants";
 
-let urlBase = apiAhiLlego.develop;
+let urlBase = apiAhiLlego.production;
 
 const instance = axios.create({
   baseURL: urlBase,

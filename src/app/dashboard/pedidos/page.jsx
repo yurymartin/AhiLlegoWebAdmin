@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import FiltersOrders from "@/components/Orders/FiltersOrders";
 import TableOrders from "@/components/Orders/TableOrders";
 import orderService from "@/data/api/services/order";
+import TooltipButton from "@/components/common/TooltipButton";
 
 const OrdersPage = () => {
   const [orders, setOrders] = useState([]);
