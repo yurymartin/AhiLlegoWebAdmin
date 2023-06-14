@@ -8,14 +8,17 @@ const InputText = (props) => {
 
   return (
     <div>
-      <label for="first_name" class="block mb-2 text-sm font-medium text-white">
+      <label
+        for="first_name"
+        className="block mb-2 text-sm font-medium text-white"
+      >
         {props.label}
       </label>
       <input
         type="text"
         id={props.id}
         name={props.name}
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
         placeholder={props.placeholder}
         required={props.required}
         onChange={onChange}

@@ -64,11 +64,11 @@ const ModalShowOrder = ({ isOpen, onCloseModal, orderId }) => {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-900 bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center overflow-auto bg-gray-900 bg-opacity-50 pb-10">
           <div className="relative w-full max-w-6xl max-h-full">
-            <div className="relative bg-gray-200 rounded-lg shadow my-10">
+            <div className="relative bg-gray-700 rounded-lg shadow my-10">
               <div className="flex items-start justify-between p-4 border-b rounded-t">
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-white">
                   DETALLE DEL PEDIDO
                 </h3>
                 <button
@@ -166,12 +166,16 @@ const ModalShowOrder = ({ isOpen, onCloseModal, orderId }) => {
                           />
                         </div>
                       </div>
-                      <div className="rounded overflow-hidden shadow-xl col-span-1 bg-white">
+                      <div
+                        className={`rounded overflow-hidden shadow-xl col-span-1 ${
+                          order.deliveryManId ? "bg-white" : "bg-gray-400"
+                        }`}
+                      >
                         <div className="px-6 py-4">
                           <div className="font-bold text-lg mb-2">
                             REPARTIDOR
                           </div>
-                          {order.deliveryManId && (
+                          {order.deliveryManId ? (
                             <>
                               <RowText
                                 label="Número Documento"
@@ -194,10 +198,12 @@ const ModalShowOrder = ({ isOpen, onCloseModal, orderId }) => {
                                 divider={true}
                               />
                             </>
+                          ) : (
+                            <RowText value={"POR ASIGNAR"} divider={true} />
                           )}
                         </div>
                       </div>
-                      <div className="rounded overflow-hidden shadow-xl col-span-1 bg-white">
+                      {/* <div className="rounded overflow-hidden shadow-xl col-span-1 bg-white">
                         <div className="px-6 py-4">
                           <div className="font-bold text-lg mb-2">CLIENTE</div>
                           <RowText
@@ -216,7 +222,7 @@ const ModalShowOrder = ({ isOpen, onCloseModal, orderId }) => {
                             divider={true}
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="rounded overflow-hidden shadow-xl col-span-1 bg-white">
                         <div className="px-6 py-4">
                           <div className="font-bold text-lg mb-2">EMPRESA</div>

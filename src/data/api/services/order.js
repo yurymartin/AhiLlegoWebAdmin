@@ -34,6 +34,10 @@ const orderService = {
     let jsonResponse = await http.patch(`/order/change-status`, data);
     return jsonResponse;
   },
+  takeOrder: async (data) => {
+    let jsonResponse = await http.post(`/order/take-order/delivery-man`, data);
+    return jsonResponse;
+  },
 };
 
 export default orderService;

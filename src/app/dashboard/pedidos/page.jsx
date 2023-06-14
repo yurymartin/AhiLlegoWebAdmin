@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import FiltersOrders from "@/components/Orders/FiltersOrders";
 import TableOrders from "@/components/Orders/TableOrders";
 import orderService from "@/data/api/services/order";
-import LoaderOverlay from "@/components/common/LoaderOverlay";
+import useAlert from "@/hook/useAlert";
 
 const filtersI = {
   statusOrderId: null,
@@ -15,6 +15,7 @@ const filtersI = {
 };
 
 const OrdersPage = () => {
+  const [onShowAlert, onHideAlert, ModalAlert] = useAlert();
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +26,6 @@ const OrdersPage = () => {
   const handleGetOrders = async (filtersParams = filtersI) => {
     try {
       showLoader();
-      setOrders([]);
       let filters = filtersParams;
       let res = await orderService.findByFilters(filters);
       setOrders(res);
@@ -55,6 +55,7 @@ const OrdersPage = () => {
         loading={loading}
         showLoader={showLoader}
         hideLoader={hideLoader}
+        onShowAlert={onShowAlert}
       />
       <br />
       <TableOrders
@@ -63,7 +64,9 @@ const OrdersPage = () => {
         loading={loading}
         showLoader={showLoader}
         hideLoader={hideLoader}
+        onShowAlert={onShowAlert}
       />
+      <ModalAlert />
     </>
   );
 };

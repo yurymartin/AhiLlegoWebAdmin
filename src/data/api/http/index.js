@@ -1,5 +1,5 @@
 import axios from "axios";
-import ahiLlegoError from "../../../common/error/handler";
+import AhiLlegoError from "../../../common/error/handler";
 import { apiAhiLlego } from "../../../common/utils/Constants";
 
 let urlBase = apiAhiLlego.production;
@@ -22,10 +22,10 @@ const get = async (endpoint = "", headers = {}) => {
     });
     return response.data;
   } catch (error) {
-    throw new ahiLlegoError(
+    throw new AhiLlegoError(
       error.response.data.statusCode,
-      error.response.data.message,
-      error.response.data.error
+      error.response.data.error,
+      error.response.data.message
     );
   }
 };
@@ -40,10 +40,10 @@ const post = async (endpoint = "", body, headers = {}) => {
     });
     return response.data;
   } catch (error) {
-    throw new ahiLlegoError(
+    throw new AhiLlegoError(
       error.response.data.statusCode,
-      error.response.data.message,
-      error.response.data.error
+      error.response.data.error,
+      error.response.data.message
     );
   }
 };
@@ -58,10 +58,10 @@ const put = async (endpoint = "", body, headers = {}) => {
     });
     return response.data;
   } catch (error) {
-    throw new ahiLlegoError(
+    throw new AhiLlegoError(
       error.response.data.statusCode,
-      error.response.data.message,
-      error.response.data.error
+      error.response.data.error,
+      error.response.data.message
     );
   }
 };
@@ -76,10 +76,10 @@ const patch = async (endpoint = "", body, headers = {}) => {
     });
     return response.data;
   } catch (error) {
-    throw new ahiLlegoError(
+    throw new AhiLlegoError(
       error.response.data.statusCode,
-      error.response.data.message,
-      error.response.data.error
+      error.response.data.error,
+      error.response.data.message
     );
   }
 };
@@ -94,10 +94,10 @@ const del = async (endpoint = "", body, headers = {}) => {
     });
     return response.data;
   } catch (error) {
-    throw new ahiLlegoError(
+    throw new AhiLlegoError(
       error.response.data.statusCode,
-      error.response.data.message,
-      error.response.data.error
+      error.response.data.error,
+      error.response.data.message
     );
   }
 };

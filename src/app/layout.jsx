@@ -13,7 +13,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-neutral-300">
       <body className={inter.className}>{children}</body>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/datepicker.min.js"></Script>
     </html>
   );
 }

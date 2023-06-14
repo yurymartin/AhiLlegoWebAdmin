@@ -1,4 +1,4 @@
-export default class ahiLlegoError extends Error {
+export default class AhiLlegoError extends Error {
   /**
    * Constructor Custom Error
    * @param {*} status [400 - 401 - and others]
@@ -11,8 +11,8 @@ export default class ahiLlegoError extends Error {
     this.name = this.constructor.name;
     this.status = status || 500;
     this.message =
-      message || 'Ocurrió un error inesperado. Por favor, intenta de nuevo';
+      message || "Ocurrió un error inesperado. Por favor, intenta de nuevo";
     this.messageUser =
-      messageUser || 'Ocurrió un error inesperado. Por favor, intenta de nuevo';
+      messageUser || "Ocurrió un error inesperado. Por favor, intenta de nuevo";
   }
 }

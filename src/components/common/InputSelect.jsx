@@ -10,7 +10,7 @@ const InputSelect = (props) => {
     <div>
       <label
         for="countries"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >
         {props.label}
       </label>
@@ -18,7 +18,7 @@ const InputSelect = (props) => {
         id={props.id}
         name={props.name}
         value={props.value}
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2"
         onChange={onChange}
       >
         <option value={""} selected>

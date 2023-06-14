@@ -1,12 +1,16 @@
-import http from '../http';
+import http from "../http";
 
 const userService = {
-  getById: async id => {
+  getById: async (id) => {
     const response = await http.get(`user/${id}`);
     return response;
   },
-  getByIdWithAddress: async id => {
+  getByIdWithAddress: async (id) => {
     const response = await http.get(`user/address/${id}`);
+    return response;
+  },
+  getAllDeliveriesMan: async () => {
+    const response = await http.get(`user/list/delivery-man`);
     return response;
   },
 };
