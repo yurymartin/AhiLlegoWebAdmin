@@ -20,6 +20,7 @@ const Home = () => {
             src={"/images/logo-rounded.png"}
             width={100}
             height={100}
+            alt="logo-rounded"
           />
           <h1 className="mt-5 text-center font-sans">
             WEB ADMINISTRADOR DE AHI-LLEGO

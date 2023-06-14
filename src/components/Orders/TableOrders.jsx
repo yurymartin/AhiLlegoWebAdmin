@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { format } from "date-fns";
 import ModalShowOrder from "./ModalShowOrder";
 import ModalChangeStatus from "./ModalChangeStatus";
-import TooltipButton from "../common/TooltipButton";
+import SkeletonTable from "../common/SkeletonTable";
 const titleTable = [
   { id: 1, label: "Id" },
   { id: 3, label: "CLIENTE" },
@@ -186,6 +186,7 @@ const TableOrders = (props) => {
           </tbody>
         </table>
       </div>
+      {props.loading && <SkeletonTable isOpen={props.loading} />}
     </>
   );
 };
