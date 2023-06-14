@@ -81,21 +81,40 @@ const useAlert = (props) => {
     setTypeAlert(initialOptions.type);
   };
 
-  const ModalAlert = useMemo(() => {
-    return () =>
-      open && (
-        <AlertDialog
-          img={iconAlert}
-          type={typeAlert}
-          title={titleAlert}
-          body={messageAlert}
-          isOpen={open}
-          hideAlert={onHideAlert}
-          onOkClick={handletOnOkClick}
-          onCancelClick={onHideAlert}
-        />
-      );
-  }, [open]);
+  const ModalAlert = () => {
+    return (
+      <>
+        {open && (
+          <AlertDialog
+            img={iconAlert}
+            type={typeAlert}
+            title={titleAlert}
+            body={messageAlert}
+            isOpen={open}
+            hideAlert={onHideAlert}
+            onOkClick={handletOnOkClick}
+            onCancelClick={onHideAlert}
+          />
+        )}
+      </>
+    );
+  };
+
+  // const ModalAlert = useMemo(() => {
+  //   return () =>
+  //     open && (
+  //       <AlertDialog
+  //         img={iconAlert}
+  //         type={typeAlert}
+  //         title={titleAlert}
+  //         body={messageAlert}
+  //         isOpen={open}
+  //         hideAlert={onHideAlert}
+  //         onOkClick={handletOnOkClick}
+  //         onCancelClick={onHideAlert}
+  //       />
+  //     );
+  // }, [open]);
 
   return [onShowAlert, onHideAlert, ModalAlert];
 };

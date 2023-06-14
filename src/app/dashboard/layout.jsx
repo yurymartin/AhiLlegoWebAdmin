@@ -15,9 +15,8 @@ export default function RootLayout({ children }) {
             <div className="flex items-center justify-between">
               <div className="flex items-center justify-start">
                 <button
-                  className="p-1 mr-4"
-                  onClick={() => setSidebarOpen(!sidebarOpen)}
                   className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                  onClick={() => setSidebarOpen(!sidebarOpen)}
                 >
                   <svg
                     className="w-6 h-6 text-white"
