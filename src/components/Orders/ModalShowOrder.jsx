@@ -19,7 +19,6 @@ const ModalShowOrder = ({ isOpen, onCloseModal, orderId }) => {
 
   const handleGetOrder = async () => {
     try {
-      console.log("[orderId] =>", orderId);
       let res = await orderService.getById(orderId);
       setOrder(res.order);
       setDetail(res.detail);
@@ -263,7 +262,11 @@ const ModalShowOrder = ({ isOpen, onCloseModal, orderId }) => {
                                 <thead className="border-b font-medium dark:border-neutral-500">
                                   <tr>
                                     {headerTable.map((item, index) => (
-                                      <th scope="col" className="px-6 py-4">
+                                      <th
+                                        key={index}
+                                        scope="col"
+                                        className="px-6 py-4"
+                                      >
                                         {item.name}
                                       </th>
                                     ))}
@@ -271,7 +274,10 @@ const ModalShowOrder = ({ isOpen, onCloseModal, orderId }) => {
                                 </thead>
                                 <tbody>
                                   {detail.map((item, index) => (
-                                    <tr className="border-b dark:border-neutral-500">
+                                    <tr
+                                      key={index}
+                                      className="border-b dark:border-neutral-500"
+                                    >
                                       <td className="whitespace-nowrap px-6 py-4 font-medium">
                                         {item.productId.name}
                                       </td>

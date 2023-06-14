@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import "./../globals.css";
+import Image from "next/image";
 
 export default function RootLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -32,11 +33,18 @@ export default function RootLayout({ children }) {
                     ></path>
                   </svg>
                 </button>
-                <a href="https://flowbite.com" className="flex ml-2 md:mr-24">
-                  <img
+                <a href="/dashboard" className="flex ml-2 md:mr-24">
+                  {/* <img
                     src="https://flowbite.com/docs/images/logo.svg"
                     className="h-8 mr-3"
                     alt="FlowBite Logo"
+                  /> */}
+                  <Image
+                    src="/images/logo-circle.png"
+                    className="h-8 mr-3"
+                    alt="FlowBite Logo"
+                    width={30}
+                    height={10}
                   />
                   <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white">
                     Ahi-Llego
@@ -53,10 +61,12 @@ export default function RootLayout({ children }) {
                       data-dropdown-toggle="dropdown-user"
                     >
                       <span className="sr-only">Open user menu</span>
-                      <img
+                      <Image
                         className="w-8 h-8 rounded-full"
-                        src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                        src={"/images/profile-picture-5.jpg"}
                         alt="user photo"
+                        width={10}
+                        height={10}
                       />
                     </button>
                   </div>
